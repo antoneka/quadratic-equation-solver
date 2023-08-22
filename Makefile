@@ -13,7 +13,7 @@ CFLAGS=-D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Waggressive-loop-
 	   -Werror=vla -fsanitize=address,alignment,bool,bounds,enum,float-cast-overflow,float-divide-by-zero,$\
 		integer-divide-by-zero,leak,nonnull-attribute,null,object-size,return,returns-nonnull-attribute,$\
 		shift,signed-integer-overflow,undefined,unreachable,vla-bound,vptr
-SRC=src/quadratic_equation_solver.cpp
+SRC=src/main.cpp src/common.cpp src/quadratic_equation.cpp src/input_output.cpp
 TARGET=src/quadratic_equation_solver
 
 all: quadratic_equation_solver
