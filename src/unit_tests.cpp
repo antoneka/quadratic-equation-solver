@@ -24,18 +24,18 @@ typedef struct
         int root_count_test;
 } Answers;
  
-
+int is_equal_to_the_first_or_the_second_num(double num, double num1, double num2);
 int testing_func(Answers *answer);
 
 int main() 
 {
     Tests test[] = 
     {
-        {0, 0, 0, NAN, NAN, INF_ROOTS},
-        {0, 5, 0, 0, NAN, ONE_ROOT},
-        {0, 0, 5, NAN, NAN, ZERO_ROOTS},
-        {4, 12, 9, -1.5, -1.5, ONE_ROOT},
-        {-3.5, 15.6, 8.75, -0.503924, 4.961067, TWO_ROOTS},
+        {0   , 0   , 0   , NAN      , NAN     , INF_ROOTS },
+        {0   , 5   , 0   , 0        , NAN     , ONE_ROOT  },
+        {0   , 0   , 5   , NAN      , NAN     , ZERO_ROOTS},
+        {4   , 12  , 9   , -1.5     , -1.5    , ONE_ROOT  },
+        {-3.5, 15.6, 8.75, -0.503924, 4.961067, TWO_ROOTS },
     };
     
     for (int test_num = 0; test_num < sizeof(test) / sizeof(test[0]); test_num++) 
@@ -87,10 +87,12 @@ int testing_func(Answers* answer)
             return isnan(answer->x1) && isnan(answer->x2);
         }
         else if (answer->root_count == ONE_ROOT)   
-        {
-            return ((isEqual(answer->x1, answer->x1_test) || isEqual(answer->x1, answer->x2_test)) && 
-                    isnan(answer->x2)) || (isEqual(answer->x1, answer->x2) && 
-                    (isEqual(answer->x1, answer->x1_test) || isEqual(answer->x1, answer->x2_test)));
+        { //TODO: creater auxilarry func
+            return (is_equal_to_the_first_or_the_second_num(answer->x1, answer->x1_test, answer->x2_test) && 
+                    isnan(answer->x2))                                                                
+                    || 
+                    (isEqual(answer->x1, answer->x2)                                               && 
+                    (is_equal_to_the_first_or_the_second_num(answer->x1, answer->x1_test, answer->x2_test)));
         }
         else if (answer->root_count == TWO_ROOTS)
         {
@@ -102,4 +104,9 @@ int testing_func(Answers* answer)
             return isnan(answer->x1) && isnan(answer->x2);
         }
     }
+}
+
+int is_equal_to_the_first_or_the_second_num(double num, double num1, double num2)
+{
+    return isEqual(num, num1) || isEqual(num, num2);
 }

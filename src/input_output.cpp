@@ -8,13 +8,13 @@ int getInput(double *a, double *b, double *c)
     assert(c != nullptr);
 
     printf("Enter the coefficients a, b, c\n"
-            "The coefficients must be real: ");
+           "The coefficients must be real: ");
 
     int number_of_initialized_variables = 0;
 
     while (true) 
     {
-        char enter_symbol = 0;
+        char enter_symbol = 0; //TODO: comment;
         number_of_initialized_variables = scanf("%lf%lf%lf%c", a, b, c, &enter_symbol);
 
         if (checkInput(number_of_initialized_variables, enter_symbol))

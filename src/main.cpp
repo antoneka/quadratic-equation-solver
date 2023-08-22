@@ -4,6 +4,10 @@
 
 int main() 
 {
+    // --test
+    // --help
+    // Input from command line
+    // --cringe linear 
     double a = 0, b = 0, c = 0;
 
     int end_of_input = getInput(&a, &b, &c);
