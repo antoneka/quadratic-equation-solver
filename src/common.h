@@ -20,6 +20,14 @@ enum Roots
 void clearBuffer();
 
 /**
+ * @brief A functon that checks the input data
+ * @param[in] variables_count The number of initialized variables
+ * @param[in] symbol_entry The symbol immediately following the constant term
+ * @return true if the input is correct otherwise false
+ */
+int checkInput(int variables_count, char symbol_entry);
+
+/**
  * @brief A function that compares two numberes
  * @param[in] num1 The first number
  * @param[in] num2 The second number

@@ -14,9 +14,10 @@ int getInput(double *a, double *b, double *c)
 
     while (true) 
     {
-        number_of_initialized_variables = scanf("%lf%lf%lf", a, b, c);
+        char enter_symbol = 0;
+        number_of_initialized_variables = scanf("%lf%lf%lf%c", a, b, c, &enter_symbol);
 
-        if (number_of_initialized_variables == 3 || number_of_initialized_variables == EOF) 
+        if (checkInput(number_of_initialized_variables, enter_symbol))
         {
             break;
         }
