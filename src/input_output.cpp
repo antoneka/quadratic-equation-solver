@@ -10,10 +10,12 @@ int getInput(double *a, double *b, double *c)
     printf("Enter the coefficients a, b, c\n"
             "The coefficients must be real: ");
 
-    int number_of_initialized_variables = scanf("%lf%lf%lf", a, b, c);
+    int number_of_initialized_variables = 0;
 
     while (true) 
     {
+        number_of_initialized_variables = scanf("%lf%lf%lf", a, b, c);
+
         if (number_of_initialized_variables == 3 || number_of_initialized_variables == EOF) 
         {
             break;
@@ -21,7 +23,6 @@ int getInput(double *a, double *b, double *c)
 
         printErrorInput();
         clearBuffer();
-        number_of_initialized_variables = scanf("%lf%lf%lf", a, b, c);
     }
 
     return number_of_initialized_variables;
@@ -33,7 +34,7 @@ void printErrorInput()
             "Try again: ");
 }
 
-void printAns(int root_count, double x1, double x2) 
+void printAns(const int root_count, const double x1, const double x2) 
 {
     switch (root_count) 
     {
@@ -54,6 +55,6 @@ void printAns(int root_count, double x1, double x2)
             break;
 
         default:
-            assert(0);
+            assert(0 && "Invalid root count");
     }
 }

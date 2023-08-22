@@ -1,0 +1,85 @@
+\doxysection{src/common.h File Reference}
+\hypertarget{common_8h}{}\label{common_8h}\index{src/common.h@{src/common.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{common_8h_a34f6126547cfdaeca6fb82d45a97692a}{Roots}} \{ \mbox{\hyperlink{common_8h_a34f6126547cfdaeca6fb82d45a97692aa52da2ea29bc7f0697300ec26acb69715}{ZERO\+\_\+\+ROOTS}} = 0
+, \mbox{\hyperlink{common_8h_a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf}{ONE\+\_\+\+ROOT}} = 1
+, \mbox{\hyperlink{common_8h_a34f6126547cfdaeca6fb82d45a97692aa876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}} = 2
+, \mbox{\hyperlink{common_8h_a34f6126547cfdaeca6fb82d45a97692aa5a79e9e49077da58fe5d46a98f0b5e36}{INF\+\_\+\+ROOTS}} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em The set of possible numbers of roots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{common_8h_a20bbd4d45e3f01305dd709f5a9cc9952}{clear\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em A function that clears the input buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{common_8h_a10732f78186416f83d0bc2474bdc6ed7}{is\+Equal}} (double num1, double num2)
+\begin{DoxyCompactList}\small\item\em A function that compares two numberes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{common_8h_a34f6126547cfdaeca6fb82d45a97692a}\label{common_8h_a34f6126547cfdaeca6fb82d45a97692a} 
+\index{common.h@{common.h}!Roots@{Roots}}
+\index{Roots@{Roots}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{Roots}{Roots}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{common_8h_a34f6126547cfdaeca6fb82d45a97692a}{Roots}}}
+
+
+
+The set of possible numbers of roots. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZERO\_ROOTS@{ZERO\_ROOTS}!common.h@{common.h}}\index{common.h@{common.h}!ZERO\_ROOTS@{ZERO\_ROOTS}}}\Hypertarget{common_8h_a34f6126547cfdaeca6fb82d45a97692aa52da2ea29bc7f0697300ec26acb69715}\label{common_8h_a34f6126547cfdaeca6fb82d45a97692aa52da2ea29bc7f0697300ec26acb69715} 
+ZERO\+\_\+\+ROOTS&The equation has zero roots. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE\_ROOT@{ONE\_ROOT}!common.h@{common.h}}\index{common.h@{common.h}!ONE\_ROOT@{ONE\_ROOT}}}\Hypertarget{common_8h_a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf}\label{common_8h_a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf} 
+ONE\+\_\+\+ROOT&The equation has one root. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_ROOTS@{TWO\_ROOTS}!common.h@{common.h}}\index{common.h@{common.h}!TWO\_ROOTS@{TWO\_ROOTS}}}\Hypertarget{common_8h_a34f6126547cfdaeca6fb82d45a97692aa876622d3c0b008da13a3685c64714e81}\label{common_8h_a34f6126547cfdaeca6fb82d45a97692aa876622d3c0b008da13a3685c64714e81} 
+TWO\+\_\+\+ROOTS&The equation has two roots. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INF\_ROOTS@{INF\_ROOTS}!common.h@{common.h}}\index{common.h@{common.h}!INF\_ROOTS@{INF\_ROOTS}}}\Hypertarget{common_8h_a34f6126547cfdaeca6fb82d45a97692aa5a79e9e49077da58fe5d46a98f0b5e36}\label{common_8h_a34f6126547cfdaeca6fb82d45a97692aa5a79e9e49077da58fe5d46a98f0b5e36} 
+INF\+\_\+\+ROOTS&The equation has an infinite number of roots. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{common_8h_a20bbd4d45e3f01305dd709f5a9cc9952}\label{common_8h_a20bbd4d45e3f01305dd709f5a9cc9952} 
+\index{common.h@{common.h}!clearBuffer@{clearBuffer}}
+\index{clearBuffer@{clearBuffer}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{clearBuffer()}{clearBuffer()}}
+{\footnotesize\ttfamily void clear\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function that clears the input buffer. 
+
+\Hypertarget{common_8h_a10732f78186416f83d0bc2474bdc6ed7}\label{common_8h_a10732f78186416f83d0bc2474bdc6ed7} 
+\index{common.h@{common.h}!isEqual@{isEqual}}
+\index{isEqual@{isEqual}!common.h@{common.h}}
+\doxysubsubsection{\texorpdfstring{isEqual()}{isEqual()}}
+{\footnotesize\ttfamily int is\+Equal (\begin{DoxyParamCaption}\item[{double}]{num1,  }\item[{double}]{num2 }\end{DoxyParamCaption})}
+
+
+
+A function that compares two numberes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num1} & The first number \\
+\hline
+\mbox{\texttt{ in}}  & {\em num2} & The second number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if num1 = num2 otherwise false 
+\end{DoxyReturn}

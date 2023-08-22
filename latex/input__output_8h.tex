@@ -1,0 +1,65 @@
+\doxysection{src/input\+\_\+output.h File Reference}
+\hypertarget{input__output_8h}{}\label{input__output_8h}\index{src/input\_output.h@{src/input\_output.h}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{input__output_8h_a0fda81b94cadb911e5055be70a8ae03b}{get\+Input}} (double \texorpdfstring{$\ast$}{*}a, double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em A function that accepts the input of coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input__output_8h_ada0f0d0d76b50ee25ef8eb50fd2a4671}{print\+Error\+Input}} ()
+\begin{DoxyCompactList}\small\item\em A function that outputs an error in case of incorrect data entry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input__output_8h_a15a70a394145bc6e13c2254ff19eacb8}{print\+Ans}} (int root\+\_\+count, double x1, double x2)
+\begin{DoxyCompactList}\small\item\em A function that outputs the roots of the equation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{input__output_8h_a0fda81b94cadb911e5055be70a8ae03b}\label{input__output_8h_a0fda81b94cadb911e5055be70a8ae03b} 
+\index{input\_output.h@{input\_output.h}!getInput@{getInput}}
+\index{getInput@{getInput}!input\_output.h@{input\_output.h}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily int get\+Input (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{a,  }\item[{double \texorpdfstring{$\ast$}{*}}]{b,  }\item[{double \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+
+
+A function that accepts the input of coefficients. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & A pointer to the first coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & A pointer to the second coefficient \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & A pointer to the the constant term \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of initialized vartiables 
+\end{DoxyReturn}
+\Hypertarget{input__output_8h_a15a70a394145bc6e13c2254ff19eacb8}\label{input__output_8h_a15a70a394145bc6e13c2254ff19eacb8} 
+\index{input\_output.h@{input\_output.h}!printAns@{printAns}}
+\index{printAns@{printAns}!input\_output.h@{input\_output.h}}
+\doxysubsubsection{\texorpdfstring{printAns()}{printAns()}}
+{\footnotesize\ttfamily void print\+Ans (\begin{DoxyParamCaption}\item[{int}]{root\+\_\+count,  }\item[{double}]{x1,  }\item[{double}]{x2 }\end{DoxyParamCaption})}
+
+
+
+A function that outputs the roots of the equation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x1} & The first root \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & The second root \\
+\hline
+\mbox{\texttt{ in}}  & {\em root\+\_\+count} & The number of roots \\
+\hline
+\end{DoxyParams}
+\Hypertarget{input__output_8h_ada0f0d0d76b50ee25ef8eb50fd2a4671}\label{input__output_8h_ada0f0d0d76b50ee25ef8eb50fd2a4671} 
+\index{input\_output.h@{input\_output.h}!printErrorInput@{printErrorInput}}
+\index{printErrorInput@{printErrorInput}!input\_output.h@{input\_output.h}}
+\doxysubsubsection{\texorpdfstring{printErrorInput()}{printErrorInput()}}
+{\footnotesize\ttfamily void print\+Error\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function that outputs an error in case of incorrect data entry. 
+
