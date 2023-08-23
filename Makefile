@@ -14,19 +14,13 @@ CFLAGS=-D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Waggressive-loop-
 		integer-divide-by-zero,leak,nonnull-attribute,null,object-size,return,returns-nonnull-attribute,$\
 		shift,signed-integer-overflow,undefined,unreachable,vla-bound,vptr
 
-SRC=src/main.cpp src/common.cpp src/quadratic_equation.cpp src/input_output.cpp
+SRC=src/main.cpp src/common.cpp src/quadratic_equation.cpp src/input_output.cpp src/unit_tests.cpp src/flag_parser.cpp
 TARGET=src/quadratic_equation_solver
-
-SRC_TEST=src/unit_tests.cpp src/common.cpp src/quadratic_equation.cpp
-TARGET_TEST=src/tests
 
 all: quadratic_equation_solver
 
 quadratic_equation_solver:
 	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
 
-tests: 
-	$(CC) $(SRC_TEST) -o $(TARGET_TEST)
-
 clean: 
-	rm $(TARGET) $(TARGET_TEST)
+	rm $(TARGET)

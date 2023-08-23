@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['one_5froot_0',['ONE_ROOT',['../common_8h.html#a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf',1,'common.h']]]
+  ['getinput_0',['getInput',['../input__output_8cpp.html#a0fda81b94cadb911e5055be70a8ae03b',1,'getInput(double *a, double *b, double *c):&#160;input_output.cpp'],['../input__output_8h.html#a0fda81b94cadb911e5055be70a8ae03b',1,'getInput(double *a, double *b, double *c):&#160;input_output.cpp']]]
 ];

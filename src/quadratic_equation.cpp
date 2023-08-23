@@ -3,6 +3,9 @@
 
 int solveQuadraticEquation(const double a, const double b, const double c, double *x1, double *x2) 
 {
+    assert(x1 != nullptr);
+    assert(x2 != nullptr);
+
     int num_of_roots = 0;
 
     if (isEqual(a, 0)) 

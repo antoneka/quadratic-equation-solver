@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isequal_0',['isEqual',['../common_8cpp.html#a10732f78186416f83d0bc2474bdc6ed7',1,'isEqual(double num1, double num2):&#160;common.cpp'],['../common_8h.html#a10732f78186416f83d0bc2474bdc6ed7',1,'isEqual(double num1, double num2):&#160;common.cpp']]]
+  ['getinput_0',['getInput',['../input__output_8cpp.html#a0fda81b94cadb911e5055be70a8ae03b',1,'getInput(double *a, double *b, double *c):&#160;input_output.cpp'],['../input__output_8h.html#a0fda81b94cadb911e5055be70a8ae03b',1,'getInput(double *a, double *b, double *c):&#160;input_output.cpp']]]
 ];
