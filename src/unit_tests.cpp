@@ -1,7 +1,7 @@
 #include "quadratic_equation.h"
 #include "common.h"
 #include "unit_tests.h"
- 
+
 void testing_func()
 {
     Tests test[] = 
@@ -11,6 +11,8 @@ void testing_func()
         {0   , 0   , 5   , NAN      , NAN     , ZERO_ROOTS},
         {4   , 12  , 9   , -1.5     , -1.5    , ONE_ROOT  },
         {-3.5, 15.6, 8.75, -0.503924, 4.961067, TWO_ROOTS },
+        {0   , 5   , -15 , 3        , 2       , TWO_ROOTS },
+        {15  , 5   , -12 , 9        , 8       , TWO_ROOTS },
     };
     
     int test_size = sizeof(test) / sizeof(test[0]);
@@ -33,18 +35,18 @@ void testing_func()
 
         if (check_test(&answer)) 
         {
-            printf("Test №%d passed\n\n", test_num + 1);
+            printf("\e[0;33mTest №%d:\e[0;33m \e[1;36mis passed\e[1;36m\n\n", test_num + 1);
         }
         else 
         {
-            printf("Test №%d failed:\n", test_num + 1);
+            printf("\e[0;33mTest №%d\e[0;33m \e[1;31mis failed:\e[1;31m\n", test_num + 1);
 
             if (root_count != root_count_test)
-                printf("Expected number of roots: %d\n"
-                       "The resulting number of roots: %d\n", root_count, root_count_test);
+                printf("\e[0;33mExpected number of roots:\e[0;33m \e[1;36m%d\e[1;36m\n"
+                       "\e[0;33mThe resulting number of roots:\e[0;33m \e[1;31m%d\e[1;31m\n\n", root_count, root_count_test);
             else 
-                printf("Expected roots: x1 = %lf, x2 = %lf\n"
-                       "The resulting roots: x1 = %lf, x2 = %lf\n\n", x1_test, x2_test, x1, x2);
+                printf("\e[0;33mExpected roots:\e[0;33m \e[1;36mx1 = %lf, x2 = %lf\e[1;36m\n"
+                       "\e[0;33mThe resulting roots:\e[0;33m \e[1;31mx1 = %lf, x2 = %lf\e[1;31m\n\n", x1_test, x2_test, x1, x2);
         }
     }
 }

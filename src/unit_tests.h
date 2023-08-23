@@ -1,6 +1,7 @@
 #ifndef UNIT_TESTS_H
 #define UNIT_TESTS_H
 
+/// A structure that stores necessary variables for testing_func
 typedef struct 
 {
     double a;
@@ -13,6 +14,7 @@ typedef struct
     int root_count_test;
 } Tests;
 
+/// A structure that stores necessary variables for check_test
 typedef struct 
 {
         double x1;
