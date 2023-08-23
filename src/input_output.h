@@ -27,7 +27,7 @@ void printErrorInput();
  * @param[in] symbol_entry The symbol immediately following the constant term
  * @return true if the input is correct otherwise false
  */
-int checkInput(int variables_count, char symbol_entry);
+int checkInput(const int variables_count, const int expected_amount_of_vars, const char symbol_entry);
 
 /**
  * @brief A function that outputs the roots of the equation

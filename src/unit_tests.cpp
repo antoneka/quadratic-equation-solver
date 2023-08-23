@@ -35,18 +35,24 @@ void testing_func()
 
         if (check_test(&answer)) 
         {
-            printf("\e[0;33mTest №%d:\e[0;33m \e[1;36mis passed\e[1;36m\n\n", test_num + 1);
+            printf(YELLOW_STRING("Test №%d ") 
+                   BLUE_STRING("is passed\n\n"), test_num + 1);
         }
         else 
         {
-            printf("\e[0;33mTest №%d\e[0;33m \e[1;31mis failed:\e[1;31m\n", test_num + 1);
+            printf(YELLOW_STRING("Test №%d ") 
+                   RED_STRING("is failed:\n"), test_num + 1);
 
             if (root_count != root_count_test)
-                printf("\e[0;33mExpected number of roots:\e[0;33m \e[1;36m%d\e[1;36m\n"
-                       "\e[0;33mThe resulting number of roots:\e[0;33m \e[1;31m%d\e[1;31m\n\n", root_count, root_count_test);
+                printf(YELLOW_STRING("Expected number of roots: ") 
+                       BLUE_STRING("%d\n")
+                       YELLOW_STRING("The resulting number of roots: ") 
+                       RED_STRING("%d\n\n"), root_count_test, root_count);
             else 
-                printf("\e[0;33mExpected roots:\e[0;33m \e[1;36mx1 = %lf, x2 = %lf\e[1;36m\n"
-                       "\e[0;33mThe resulting roots:\e[0;33m \e[1;31mx1 = %lf, x2 = %lf\e[1;31m\n\n", x1_test, x2_test, x1, x2);
+                printf(YELLOW_STRING("Expected roots: ") 
+                       BLUE_STRING("x1 = %lf, x2 = %lf\n")
+                       YELLOW_STRING("The resulting roots: ") 
+                       RED_STRING("x1 = %lf, x2 = %lf\n\n"), x1_test, x2_test, x1, x2);
         }
     }
 }

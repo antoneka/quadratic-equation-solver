@@ -1,6 +1,10 @@
 #ifndef UNIT_TESTS_H
 #define UNIT_TESTS_H
 
+#define YELLOW_STRING(string) "\e[0;33m" string "\e[0;33m"
+#define BLUE_STRING(string)   "\e[1;36m" string "\e[1;36m"
+#define RED_STRING(string)    "\e[1;31m" string "\e[1;31m"
+
 /// A structure that stores necessary variables for testing_func
 typedef struct 
 {
