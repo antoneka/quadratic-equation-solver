@@ -13,15 +13,15 @@ int main(int argc, char *argv[])
         .is_help = IS_DISABLED,
     };
 
-    int flag_err = flag_parser(argc, argv, &flags);
+    int flag_err = flagParser(argc, argv, &flags);
     
     if (flag_err)
         return 1;
 
     if (flags.is_test)
-        testing_func();
+        testingFunc();
     else if (flags.is_help)
-        help_func();
+        helpingFunc();
     else 
     {
         double a = 0, b = 0, c = 0;

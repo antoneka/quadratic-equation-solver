@@ -38,7 +38,7 @@ int solveQuadraticEquation(const double a, const double b, const double c, doubl
             if (isEqual(c, 0)) 
             {
                 *x1 = 0;
-                *x2 = -b / a;
+                solveLinearEquation(a, b, x2);
             } 
             else 
             {

@@ -1,6 +1,6 @@
 #include "common.h"
 
-int flag_parser(int argc, char *argv[], Flags *flags) {
+int flagParser(int argc, char *argv[], Flags *flags) {
     int flag_err = 0;
 
     opterr = 0;

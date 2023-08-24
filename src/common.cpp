@@ -12,7 +12,7 @@ int isEqual(const double num1, const double num2)
     return fabs(num1 - num2) < eps; 
 }
 
-void help_func()
+void helpingFunc()
 {
     printf("Quadratic equation solver version 1.0.0\n\n"
            "You can use the program in a number of ways:\n\n"

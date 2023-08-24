@@ -49,11 +49,11 @@ int isEqual(const double num1, const double num2);
  * @param[out] flags A structure of flags
  * @return flag_err: 0 if the input of the flags is correct otherwise 1
  */
-int flag_parser(int argc, char *argv[], Flags *flags);
+int flagParser(int argc, char *argv[], Flags *flags);
 
 /**
  * @brief A function that outputs the flag --help
  */
-void help_func();
+void helpingFunc();
 
 #endif // COMMON_H

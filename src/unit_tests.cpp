@@ -1,9 +1,12 @@
 #include "quadratic_equation.h"
 #include "common.h"
 #include "unit_tests.h"
+#include "file_parser.h"
+#include <cstdio>
 
-void testing_func()
+void testingFunc()
 {
+    /*
     Tests test[] = 
     {
         {0   , 0   , 0   , NAN      , NAN     , INF_ROOTS },
@@ -16,8 +19,26 @@ void testing_func()
     };
     
     int test_size = sizeof(test) / sizeof(test[0]);
+    */
 
-    for (int test_num = 0; test_num < test_size; test_num++) 
+    FILE *test_file = fopen("test_file.txt", "r");
+
+    if (!test_file) 
+    {
+        fprintf(stderr, "Test file doesn`t exist\n");
+        return;
+    }
+
+    size_t test_size = 0;
+    Tests *test = fileParser(test_file, &test_size);
+
+    if (!test)
+    {
+        fprintf(stderr, "Test input error\n");
+        return;
+    }
+
+    for (size_t test_num = 0; test_num < test_size; test_num++) 
     {
         double a = test[test_num].a;
         double b = test[test_num].b;
@@ -33,14 +54,14 @@ void testing_func()
 
         Answers answer = {x1, x2, root_count, x1_test, x2_test, root_count_test};
 
-        if (check_test(&answer)) 
+        if (checkTest(&answer)) 
         {
-            printf(YELLOW_STRING("Test №%d ") 
+            printf(YELLOW_STRING("Test №%zu ") 
                    BLUE_STRING("is passed\n\n"), test_num + 1);
         }
         else 
         {
-            printf(YELLOW_STRING("Test №%d ") 
+            printf(YELLOW_STRING("Test №%zu ") 
                    RED_STRING("is failed:\n"), test_num + 1);
 
             if (root_count != root_count_test)
@@ -55,9 +76,12 @@ void testing_func()
                        RED_STRING("x1 = %lf, x2 = %lf\n\n"), x1_test, x2_test, x1, x2);
         }
     }
+
+    free(test);
+    fclose(test_file);
 }
 
-int check_test(Answers* answer)
+int checkTest(Answers* answer)
 {
     if (answer->root_count != answer->root_count_test) 
     {

@@ -33,13 +33,13 @@ typedef struct
 /** 
  * @brief A function testing the solveQuadraticEquation function
  */
-void testing_func();
+void testingFunc();
 
 /**
  * @brief A function checking a single test
  * @param[in] A structure that stores the necessary variables for checking a single test
  * @return 1 if the test is passed otherwise 0
  */
-int check_test(Answers *answer);
+int checkTest(Answers *answer);
 
 #endif  // UNIT_TESTS_H
