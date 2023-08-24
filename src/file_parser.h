@@ -3,7 +3,6 @@
 
 #include "unit_tests.h"
 #include "common.h"
-#include <string.h>
 
 const int MAXSIZE = 512;
 

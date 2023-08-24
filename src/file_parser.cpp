@@ -1,3 +1,4 @@
+#include <string.h>
 #include "file_parser.h"
 
 Tests* fileParser(FILE *test_file, size_t *test_count)
@@ -19,6 +20,7 @@ Tests* fileParser(FILE *test_file, size_t *test_count)
     {
         if (test.test_count == test.test_arr_size)
         {
+            // TODO: сделать проверку на превышение test_arr_size до определенного размера 
             test.test_arr_size *= 2;
             Tests* test_arr_tmp = (Tests*)realloc(test.test_arr, sizeof(Tests) * test.test_arr_size);
 
@@ -42,9 +44,10 @@ Tests* fileParser(FILE *test_file, size_t *test_count)
 
 int getParam(char line[], struct TestArgs *test)
 {
-    char sep[10] = " \n";
+    const int sep_count = 10;
+    char sep[sep_count] = " \n";
+
     char *param = strtok(line, sep);
-    
     if (param)
         test->test_arr[test->test_count].a = atof(param);
     else 

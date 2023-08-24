@@ -18,7 +18,7 @@ void testingFunc()
         {15  , 5   , -12 , 9        , 8       , TWO_ROOTS },
     };
     
-    int test_size = sizeof(test) / sizeof(test[0]);
+    size_t test_size = sizeof(test) / sizeof(test[0]);
     */
 
     FILE *test_file = fopen("test_file.txt", "r");
@@ -40,6 +40,7 @@ void testingFunc()
 
     for (size_t test_num = 0; test_num < test_size; test_num++) 
     {
+        // TODO: сделать tmp структуру в которую копировать данные с помощью присваивания
         double a = test[test_num].a;
         double b = test[test_num].b;
         double c = test[test_num].c;

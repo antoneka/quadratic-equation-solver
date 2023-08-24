@@ -5,8 +5,6 @@
 
 int main(int argc, char *argv[]) 
 {
-    // --test
-    // --help
     Flags flags = 
     {
         .is_test = IS_DISABLED,
