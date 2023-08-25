@@ -1,4 +1,3 @@
-#include <string.h>
 #include "file_parser.h"
 
 Tests* fileParser(FILE *test_file, size_t *test_count)

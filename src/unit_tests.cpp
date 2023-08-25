@@ -2,7 +2,6 @@
 #include "common.h"
 #include "unit_tests.h"
 #include "file_parser.h"
-#include <cstdio>
 
 void testingFunc()
 {
