@@ -39,20 +39,12 @@ void testingFunc()
 
     for (size_t test_num = 0; test_num < test_size; test_num++) 
     {
-        // TODO: сделать tmp структуру в которую копировать данные с помощью присваивания
-        double a = test[test_num].a;
-        double b = test[test_num].b;
-        double c = test[test_num].c;
-
-        double x1_test = test[test_num].x1_test;
-        double x2_test = test[test_num].x2_test;
-
-        int root_count_test = test[test_num].root_count_test;
-
         double x1 = NAN, x2 = NAN;
-        int root_count = solveQuadraticEquation(a, b, c, &x1, &x2);
+        int root_count = solveQuadraticEquation(test[test_num].a, test[test_num].b, 
+                                                test[test_num].c, &x1, &x2);
 
-        Answers answer = {x1, x2, root_count, x1_test, x2_test, root_count_test};
+        Answers answer = {x1, x2, root_count, test[test_num].x1_test, test[test_num].x2_test, 
+                          test[test_num].root_count_test};
 
         if (checkTest(&answer)) 
         {
@@ -64,16 +56,17 @@ void testingFunc()
             printf(YELLOW_STRING("Test №%zu ") 
                    RED_STRING("is failed:\n"), test_num + 1);
 
-            if (root_count != root_count_test)
+            if (root_count != test[test_num].root_count_test)
                 printf(YELLOW_STRING("Expected number of roots: ") 
                        BLUE_STRING("%d\n")
                        YELLOW_STRING("The resulting number of roots: ") 
-                       RED_STRING("%d\n\n"), root_count_test, root_count);
+                       RED_STRING("%d\n\n"), test[test_num].root_count_test, root_count);
             else 
                 printf(YELLOW_STRING("Expected roots: ") 
                        BLUE_STRING("x1 = %lf, x2 = %lf\n")
                        YELLOW_STRING("The resulting roots: ") 
-                       RED_STRING("x1 = %lf, x2 = %lf\n\n"), x1_test, x2_test, x1, x2);
+                       RED_STRING("x1 = %lf, x2 = %lf\n\n"), test[test_num].x1_test, 
+                                                             test[test_num].x2_test, x1, x2);
         }
     }
 

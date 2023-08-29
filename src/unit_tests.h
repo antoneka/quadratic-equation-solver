@@ -5,29 +5,29 @@
 #define BLUE_STRING(string)   "\e[1;36m" string "\e[1;36m"
 #define RED_STRING(string)    "\e[1;31m" string "\e[1;31m"
 
-/// A structure that stores necessary variables for testing_func
+/// A structure that stores necessary variables for testingFunc
 typedef struct 
 {
-    double a;
-    double b;
-    double c;
+    double a; ///< The first coefficient 
+    double b; ///< The second coefficient
+    double c; ///< Free term
 
-    double x1_test;
-    double x2_test;
+    double x1_test; ///< The first reference root
+    double x2_test; ///< The second reference root
 
-    int root_count_test;
+    int root_count_test; ///< Reference number of roots
 } Tests;
 
-/// A structure that stores necessary variables for check_test
+/// A structure that stores necessary variables for checkTest
 typedef struct 
 {
-        double x1;
-        double x2;
-        int root_count;
+        double x1; ///< The resulting first root
+        double x2; ///< The resulting second root
+        int root_count; ///< The resulting number of roots
 
-        double x1_test;
-        double x2_test;
-        int root_count_test;
+        double x1_test; ///< The first reference root
+        double x2_test; ///< The second reference root
+        int root_count_test; ///< Reference number of roots
 } Answers;
 
 /** 

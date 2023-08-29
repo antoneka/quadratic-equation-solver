@@ -15,12 +15,16 @@ CFLAGS=-D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++ -Waggressive-loop-
 		shift,signed-integer-overflow,undefined,unreachable,vla-bound,vptr
 
 SRC=src/main.cpp src/common.cpp src/quadratic_equation.cpp src/input_output.cpp src/unit_tests.cpp src/file_parser.cpp
+OBJ=$(SRC:.cpp=.o)
 TARGET=src/quadratic_equation_solver
 
 all: quadratic_equation_solver
 
-quadratic_equation_solver:
-	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
+quadratic_equation_solver: $(OBJ)
+	$(CC) $(OBJ) -o $(TARGET)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean: 
-	rm $(TARGET)
+	rm $(TARGET) $(OBJ)

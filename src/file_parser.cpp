@@ -19,8 +19,10 @@ Tests* fileParser(FILE *test_file, size_t *test_count)
     {
         if (test.test_count == test.test_arr_size)
         {
-            // TODO: сделать проверку на превышение test_arr_size до определенного размера 
             test.test_arr_size *= 2;
+            if (test.test_arr_size > MAXSIZE)
+                return NULL;
+
             Tests* test_arr_tmp = (Tests*)realloc(test.test_arr, sizeof(Tests) * test.test_arr_size);
 
             if (test_arr_tmp)
