@@ -26,12 +26,18 @@ Tests* fileParser(FILE *test_file, size_t *test_count)
             if (test_arr_tmp)
                 test.test_arr = test_arr_tmp;
             else
+            {
+                free(test.test_arr);
                 return NULL;
+            }
         }
 
         int is_input_correct = getParam(line, &test);
         if (!is_input_correct)
+        {
+            free(test.test_arr);
             return NULL;
+        }
 
         test.test_count++;
     }
