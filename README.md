@@ -23,3 +23,8 @@ A program solving quadratic equations of the form $ax^2 + bx + c = 0,$ where $a,
 ```
     ./quadratic_equation_solver --help
 ```
+
+* compile documentation
+```
+    doxygen .doxyconfig
+```
