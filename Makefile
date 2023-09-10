@@ -21,10 +21,13 @@ TARGET=src/quadratic_equation_solver
 all: quadratic_equation_solver
 
 quadratic_equation_solver: $(OBJ)
-	$(CC) $(OBJ) -o $(TARGET)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
+doc:
+	doxygen .doxyconfig
+
 clean: 
-	rm $(TARGET) $(OBJ)
+	rm -rf $(TARGET) $(OBJ) html latex

@@ -3,10 +3,16 @@
 A program solving quadratic equations of the form $ax^2 + bx + c = 0,$ where $a, b, c \in \mathbb {R}$
 
 #### Compilation:
+
+* compile the program:
 ```c++
     make quadratic_equation_solver
 ```
 
+* compile documentation
+```c++
+    make doc
+```
 #### Usage:
 
 * solve a quadratic equation:
@@ -24,7 +30,3 @@ A program solving quadratic equations of the form $ax^2 + bx + c = 0,$ where $a,
     ./quadratic_equation_solver --help
 ```
 
-* compile documentation:
-```
-    doxygen .doxyconfig
-```
